@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace=AppEtt;assembly=AppEtt"
+             x:Class="AppEtt.MainPage">
+
+    <StackLayout>
+
+        <ActivityIndicator x:Name="activityIndicator" Color="LawnGreen" IsRunning="False" />
+
+        <Label Text="Welcome to my app!" TextColor="Gray" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <Label Text="Enter text and recive att special message" TextColor="Gray" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+        <Entry x:Name="UserInput" 
+               Placeholder="Enter your message here..">
+        </Entry>
+
+        <Button x:Name="UIButton"
+                Text="Go!"
+                Clicked="OnUIButtonClicked"
+                BackgroundColor="LightGray">
+        </Button>
+
+    </StackLayout>
+
+</ContentPage>
