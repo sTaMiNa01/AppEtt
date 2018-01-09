@@ -8,8 +8,18 @@
 
         <ActivityIndicator x:Name="activityIndicator" Color="LawnGreen" IsRunning="False" />
 
-        <Label Text="Welcome to my app!" TextColor="Gray" VerticalOptions="Center" HorizontalOptions="Center"/>
-        <Label Text="Enter text and recive att special message" TextColor="Gray" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <Label Text="Welcome to my app!" 
+               TextColor="Gray" 
+               VerticalOptions="Center" 
+               HorizontalOptions="Center"/>
+
+        <Label Text="Enter text and recive att special message" 
+               TextColor="Gray" 
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" 
+               FontSize="Micro"/>
+
+        <Label></Label>
 
         <Entry x:Name="UserInput" 
                Placeholder="Enter your message here..">

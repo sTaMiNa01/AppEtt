@@ -27,13 +27,13 @@ namespace AppEtt
         {
             string searchText = UserInput.Text;
 
-            var apiResponce = await GetYodaText(searchText);
+            var apiResponce = await GetYodaText(searchText.Trim());
 
             string yodaReply = apiResponce.ToString();
 
             activityIndicator.IsRunning = false;
 
-            await this.DisplayAlert("Yoda answerd:", yodaReply, "Cool");
+            await this.DisplayAlert("Yoda answered:", yodaReply, "Cool");
 
         }
 
@@ -45,9 +45,17 @@ namespace AppEtt
 
             var responce = await _client.GetAsync(_uri);
 
-            var responceContent = await responce.Content.ReadAsStringAsync();
+            if(responce.IsSuccessStatusCode == true)
+            {
+                var responceContent = await responce.Content.ReadAsStringAsync();
 
-            return responceContent;
+                return responceContent;
+            }
+            else
+            {
+                return "Server error, please try again later.";
+            }
+
         }
 
 
